@@ -29,16 +29,21 @@
 
     body {
       font-family:
-        "SF Compact",
-        "Google Sans Code",
-        system-ui, -apple-system, BlinkMacSystemFont,
-        Inter,sans-serif;
+        "SF Compact",            /* macOS/iOS のサンフランシスコ系 */
+        "SF Pro Text",           /* macOS/iOS の別系統SFフォント */
+        "Google Sans Code",      /* インストール済みまたは Web フォントとして読み込み可能な場合 */
+        -apple-system,           /* iOS/macOS Safari のシステムフォント */
+        system-ui,               /* その他モダンブラウザのシステムフォント */
+        BlinkMacSystemFont,      /* Chrome の macOS システムフォント */
+        "Inter",                 /* インストール済みまたは Web フォントとして読み込み可能な場合 */
+        sans-serif;              /* 最終フォールバック */
       background: var(--bg-color);
       color: var(--main-color);
       padding: 3rem;
       max-width: 32rem;
       margin: auto;
     }
+
 
     /* =========================
        タイトル
