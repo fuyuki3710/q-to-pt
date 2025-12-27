@@ -70,7 +70,6 @@
       flex: 1;
     }
 
-
     input[type="number"] {
       appearance: auto;
       -webkit-appearance: auto;
@@ -129,8 +128,8 @@
       color: var(--sub-color);
       width: 5rem;
       text-align: right;
-      line-height: 1;          /* ★ 下揃え対策 */
-      align-self: flex-end;    /* ★ 保険 */
+      line-height: 1;
+      align-self: flex-end;
     }
 
     button.copy:hover {
@@ -247,8 +246,8 @@
       }
 
       const pt = q * 90 / 127;
-      value2.textContent  = pt.toFixed(2);
-      value14.textContent = pt.toFixed(14);
+      value2.textContent  = (Math.floor(pt * 100) / 100).toFixed(2);      // 小数第2位で切り捨て
+      value14.textContent = (Math.floor(pt * 1e14) / 1e14).toFixed(14);   // 小数第14位で切り捨て
     }
 
     function copyValue(id, button) {
