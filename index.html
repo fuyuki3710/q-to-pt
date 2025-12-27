@@ -77,10 +77,12 @@
       flex: 1;
     }
 
-    input:focus {
-    outline: 2px solid #111; /* 黒に変更 */
-    outline-offset: 2px;
-  }
+    input:focus,
+    textarea:focus {
+      outline: 2px solid black;  /* 枠の色を黒に */
+      outline-offset: 2px;       /* 枠とテキストの間隔を調整（任意） */
+    }
+
 
 
     input[type="number"] {
